@@ -1,0 +1,43 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class carMovement : MonoBehaviour
+{
+    public int scale = 5 ;
+    public float horizontal; 
+    private float initial = 1;
+
+    
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        horizontal = Input.GetAxis("Horizontal");
+        
+    }
+
+    private void FixedUpdate(){
+        GetComponent<Rigidbody>().velocity = new Vector3(horizontal * 2, GetComponent<Rigidbody>().velocity.y, scale * initial);
+    }
+
+     void OnTriggerEnter(Collider ob){
+        if(ob.tag == "pad"){
+            scale *= 2;
+        }
+
+    }
+
+    void OnTriggerExit(Collider ob){
+        if(ob.tag == "pad"){
+            scale *= 2;
+        }
+    }
+
+}
