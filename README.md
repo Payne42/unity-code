@@ -11,3 +11,6 @@ In the full build of the game there is a credits menu denoting the people who wo
 So please take a look, as they also worked very hard to make this game.
 And to reconfirm, my portion of the project was the racing section with the boostpads and walls.
 The scripts carMovement, sceneManager, and finishLine are the only scripts that have any relevance to the finished project.
+
+There are also nonzipped folders of both projects. I did this, in the case that you only wanted to see the scripts of each project
+without having to download the full game builds.
